@@ -1,4 +1,4 @@
-angular.module("ella_cinders_1926_colleen_moore.controllers", [])
+angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_.controllers", [])
 
 
 
@@ -172,9 +172,9 @@ angular.module("ella_cinders_1926_colleen_moore.controllers", [])
 					for(var e = 0; e < keys.length ; e++) {
 						localforage.setItem(keys[e],[]);
 					}
-					$state.go("ella_cinders_1926_colleen_moore.ella");
+					$state.go("letter_of_introduction_1938_edgar_bergen_rita_johnson_.dashboard");
 				}).catch(function(err) {
-					$state.go("ella_cinders_1926_colleen_moore.ella");
+					$state.go("letter_of_introduction_1938_edgar_bergen_rita_johnson_.dashboard");
 				});
 			}
 			$rootScope.closeMenuPopover();
@@ -357,7 +357,7 @@ angular.module("ella_cinders_1926_colleen_moore.controllers", [])
 	popover_template += "<ion-popover-view class=\"fit\">";
 	popover_template += "	<ion-content>";
 	popover_template += "		<ion-list>";
-	popover_template += "			<a  class=\"item dark-ink\" ng-href=\"#/ella_cinders_1926_colleen_moore/about_us\" ng-click=\"popover.hide()\">";
+	popover_template += "			<a  class=\"item dark-ink\" ng-href=\"#/letter_of_introduction_1938_edgar_bergen_rita_johnson_/about_us\" ng-click=\"popover.hide()\">";
 	popover_template += "			{{ 'About Us' | translate }}";
 	popover_template += "			</a>";
 	popover_template += "			<a  class=\"item dark-ink\" ng-click=\"showLanguageDialog()\" >";
@@ -401,8 +401,8 @@ angular.module("ella_cinders_1926_colleen_moore.controllers", [])
 	controller_by_user();
 })
 
-// TODO: ellaCtrl --|-- 
-.controller("ellaCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate,tmhDynamicLocale){
+// TODO: letterCtrl --|-- 
+.controller("letterCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate,tmhDynamicLocale){
 	
 	$rootScope.headerExists = true;
 	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
@@ -420,13 +420,13 @@ angular.module("ella_cinders_1926_colleen_moore.controllers", [])
 			$scope.scrollTop();
 		});
 	};
-	// TODO: ellaCtrl --|-- $scope.scrollTop
+	// TODO: letterCtrl --|-- $scope.scrollTop
 	$rootScope.scrollTop = function(){
 		$timeout(function(){
 			$ionicScrollDelegate.$getByHandle("top").scrollTop();
 		},100);
 	};
-	// TODO: ellaCtrl --|-- $scope.toggleGroup
+	// TODO: letterCtrl --|-- $scope.toggleGroup
 	$scope.toggleGroup = function(group) {
 		if ($scope.isGroupShown(group)) {
 			$scope.shownGroup = null;
@@ -439,7 +439,7 @@ angular.module("ella_cinders_1926_colleen_moore.controllers", [])
 		return $scope.shownGroup === group;
 	};
 	
-	// TODO: ellaCtrl --|-- $scope.redirect
+	// TODO: letterCtrl --|-- $scope.redirect
 	// redirect
 	$scope.redirect = function($url){
 		$window.location.href = $url;
@@ -453,7 +453,7 @@ angular.module("ella_cinders_1926_colleen_moore.controllers", [])
 	}, 300);
 	// code 
 
-	// TODO: ellaCtrl --|-- controller_by_user
+	// TODO: letterCtrl --|-- controller_by_user
 	// controller by user 
 	function controller_by_user(){
 		try {

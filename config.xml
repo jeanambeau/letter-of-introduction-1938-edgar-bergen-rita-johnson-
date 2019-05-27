@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.imabuilder.bighouse.ellacinders1926colleenmoore" version="1.0.190528" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-	<name>Ella cinders 1926 Colleen Moore</name>
-	<description>Poor Ella Cinders is much abused by her evil step-mother and step-sisters. When she wins a local beauty contest she jumps at the chance to get out of her dead-end life and go to Hollywood,</description>
-	<author email="ambeaujean@gmail.com" href="https://fanaticsshop.info/">Jean Ambeau</author>
+<widget id="com.imabuilder.bighouse.letterofintroduction1938edgarbergenritajohnson" version="1.0.190528" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Letter of Introduction (1938) Edgar Bergen, Rita Johnson </name>
+	<description>An aging actor, about to marry for the fourth time, is surprised when a young woman, who is the daughter he never knew he had, appears with a letter of introduction. It seems that she is an actress and is trying to make it on Broadway. He tries to establish a relationship with her but finds it difficult to tell the world of their true relationship.</description>
+	<author email="ambeaujean@gmail.com" href="https://fanaticsshop.info">Jean Ambeau</author>
 	<content src="index.html" />
 	<!-- Network Request Whitelist -->
 	<access origin="*" />
@@ -89,8 +89,8 @@
 	<plugin name="cordova-plugin-statusbar" />
 	<plugin name="ionic-plugin-keyboard" />
 	<!-- ./default -->
-	<plugin name="cordova-plugin-admobpro" />
 	<plugin name="cordova-plugin-dialogs" />
+	<plugin name="cordova-disable-http-cache" />
 	<plugin name="cordova-plugin-inappbrowser" />
 	<platform name="android">
 		<icon qualifier="ldpi" src="www/res/icon/android/ldpi-icon.png" />

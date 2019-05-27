@@ -1,2 +1,2 @@
-# Ella cinders 1926 Colleen Moore
-Poor Ella Cinders is much abused by her evil step-mother and step-sisters. When she wins a local beauty contest she jumps at the chance to get out of her dead-end life and go to Hollywood,
+# Letter of Introduction (1938) Edgar Bergen, Rita Johnson 
+An aging actor, about to marry for the fourth time, is surprised when a young woman, who is the daughter he never knew he had, appears with a letter of introduction. It seems that she is an actress and is trying to make it on Broadway. He tries to establish a relationship with her but finds it difficult to tell the world of their true relationship.
