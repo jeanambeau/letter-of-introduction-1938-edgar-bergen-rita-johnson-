@@ -1,0 +1,18 @@
+
+        {
+          "name": "Letter of Introduction (1938) Edgar Bergen, Rita Johnson  Lite",
+          "short_name": "Letter of Introduction (1938) Edgar Bergen, Rita Johnson ",
+          "start_url": "index.html",
+          "display": "standalone",
+          "icons":[{"src": "data/images/header/logo.png"}],
+          "prefer_related_applications": true,
+          "related_applications": [
+            {
+              "platform": "play",
+              "id": "com.imabuilder.bighouse.letterofintroduction1938edgarbergenritajohnson"
+            }
+          ],
+         "background_color": "#ffffff",
+         "theme_color": "#000000"
+        }
+                
