@@ -1,7 +1,7 @@
-angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_", ["ngCordova","ionic","ionMdInput","ionic-material","ion-datetime-picker","ionic.rating","utf8-base64","angular-md5","chart.js","pascalprecht.translate","tmh.dynamicLocale","letter_of_introduction_1938_edgar_bergen_rita_johnson_.controllers", "letter_of_introduction_1938_edgar_bergen_rita_johnson_.services"])
+angular.module("ella_cinders_1926_colleen_moore", ["ngCordova","ionic","ionMdInput","ionic-material","ion-datetime-picker","ionic.rating","utf8-base64","angular-md5","chart.js","pascalprecht.translate","tmh.dynamicLocale","ella_cinders_1926_colleen_moore.controllers", "ella_cinders_1926_colleen_moore.services"])
 	.run(function($ionicPlatform,$window,$interval,$timeout,$ionicHistory,$ionicPopup,$state,$rootScope){
 
-		$rootScope.appName = "Letter of Introduction (1938) Edgar Bergen, Rita Johnson " ;
+		$rootScope.appName = "Ella cinders 1926 Colleen Moore" ;
 		$rootScope.appLogo = "data/images/header/logo.png" ;
 		$rootScope.appVersion = "1.0" ;
 		$rootScope.headerShrink = false ;
@@ -26,9 +26,9 @@ angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_", ["ngCor
 
 			localforage.config({
 				driver : [localforage.WEBSQL,localforage.INDEXEDDB,localforage.LOCALSTORAGE],
-				name : "letter_of_introduction_1938_edgar_bergen_rita_johnson_",
-				storeName : "letter_of_introduction_1938_edgar_bergen_rita_johnson_",
-				description : "The offline datastore for Letter of Introduction (1938) Edgar Bergen, Rita Johnson  app"
+				name : "ella_cinders_1926_colleen_moore",
+				storeName : "ella_cinders_1926_colleen_moore",
+				description : "The offline datastore for Ella cinders 1926 Colleen Moore app"
 			});
 
 			if(window.cordova){
@@ -46,6 +46,79 @@ angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_", ["ngCor
 			if(window.StatusBar) {
 				StatusBar.styleDefault();
 			}
+			// this will create a banner on startup
+			//required: cordova plugin add cordova-plugin-admobpro --save
+			if (typeof AdMob !== "undefined"){
+				var admobid = {};
+				admobid = {
+					banner: "ca-app-pub-2041208520808887/8604528653",
+					interstitial: "ca-app-pub-2041208520808887/4693860341",
+					rewardvideo: ""
+				};
+				
+				// ADS BANNER
+				try{
+					AdMob.createBanner({
+						adId: admobid.banner,
+						overlap: false,
+						autoShow: false,
+						offsetTopBar: false,
+						position: AdMob.AD_POSITION.TOP_CENTER,
+						bgColor: "white"
+					});
+				}catch(err){ 
+					//navigator.notification.activityStart(err.message, "Admob");
+				}
+				$interval(function(){
+					if($rootScope.liveStatus == "run"){
+						try{
+							AdMob.showBanner(AdMob.AD_POSITION.TOP_CENTER);
+						}catch(err){ 
+							//navigator.notification.activityStart(err.message, "Admob");
+						}
+					}
+				},10000); 
+				
+				$ionicPlatform.on("pause",function(){
+					try{
+						AdMob.hideBanner();
+					}catch(err){ 
+						//navigator.notification.activityStart(err.message, "Admob");
+					}
+				});
+			
+				// INTERSTITIAL
+				try{
+					AdMob.prepareInterstitial({
+						adId: admobid.interstitial,
+						autoShow: false,
+					});
+				}catch(err){ 
+					//alert(err.message);
+				}
+				
+				$interval(function(){
+					if($rootScope.liveStatus == "run"){
+						try{
+							AdMob.showInterstitial();
+						}catch(err){ 
+							//alert(err.message);
+						}
+					}
+				},10000); 
+				
+				// rewardvideo
+				$timeout(function(){
+					try{
+						AdMob.prepareRewardVideoAd({
+							adId: admobid.rewardvideo,
+							autoShow: false,
+						});
+					}catch(err){ 
+						//alert(err.message);
+					}
+				}, 500);
+			}
 
 
 		});
@@ -53,7 +126,7 @@ angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_", ["ngCor
 			if($ionicHistory.backView()){
 				$ionicHistory.goBack();
 			}else{
-				$state.go("letter_of_introduction_1938_edgar_bergen_rita_johnson_.dashboard");
+				$state.go("ella_cinders_1926_colleen_moore.ella");
 			}
 			e.preventDefault();
 			return false;
@@ -202,19 +275,20 @@ angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_", ["ngCor
 		console.log("%cerror: %cdomain whitelist","color:blue;font-size:16px;","color:red;font-size:16px;");
 	}
 	$stateProvider
-	.state("letter_of_introduction_1938_edgar_bergen_rita_johnson_",{
-		url: "/letter_of_introduction_1938_edgar_bergen_rita_johnson_",
+	.state("ella_cinders_1926_colleen_moore",{
+		url: "/ella_cinders_1926_colleen_moore",
 			abstract: true,
-			templateUrl: "templates/letter_of_introduction_1938_edgar_bergen_rita_johnson_-side_menus.html",
+			templateUrl: "templates/ella_cinders_1926_colleen_moore-side_menus.html",
 			controller: "side_menusCtrl",
 	})
 
-	.state("letter_of_introduction_1938_edgar_bergen_rita_johnson_.letter", {
-		url: "/letter",
+	.state("ella_cinders_1926_colleen_moore.ella", {
+		url: "/ella",
+		cache:false,
 		views: {
-			"letter_of_introduction_1938_edgar_bergen_rita_johnson_-side_menus" : {
-						templateUrl:"templates/letter_of_introduction_1938_edgar_bergen_rita_johnson_-letter.html",
-						controller: "letterCtrl"
+			"ella_cinders_1926_colleen_moore-side_menus" : {
+						templateUrl:"templates/ella_cinders_1926_colleen_moore-ella.html",
+						controller: "ellaCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
@@ -226,5 +300,5 @@ angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_", ["ngCor
 // router by user
 
 
-	$urlRouterProvider.otherwise("/letter_of_introduction_1938_edgar_bergen_rita_johnson_/dashboard");
+	$urlRouterProvider.otherwise("/ella_cinders_1926_colleen_moore/ella");
 });
