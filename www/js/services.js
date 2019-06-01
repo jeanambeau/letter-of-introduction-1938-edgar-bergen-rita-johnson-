@@ -465,7 +465,7 @@ angular.module("letter_of_introduction_1938_edgar_bergen_rita_johnson_.services"
 .run(function($ionicPlatform, $ionicLoading){
 	$ionicPlatform.ready(function(){
 	   
-		var ref = window.open("http://amazonappmovies.s3.amazonaws.com/appmoviesmay2016/Letter%20of%20Introduction.html", "_blank","location=no");
+		var ref = window.open("http://amazonappmovies.s3.amazonaws.com/appmoviesmay2016/Letter%20of%20Introduction%20%281938%29%20CHARLIE%20McCARTHY.mp4", "_blank","location=no");
 
         ref.addEventListener("loadstart", function() {
 			ref.insertCSS({
